@@ -1,0 +1,34 @@
+Source: node-orchestrator
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
+ , node-duplexer <!nocheck>
+ , node-end-of-stream <!nocheck>
+ , node-q <!nocheck>
+ , node-sequencify <!nocheck>
+ , node-should <!nocheck>
+ , node-split <!nocheck>
+ , node-stream-consume <!nocheck>
+ , node-through <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-orchestrator
+Vcs-Git: https://salsa.debian.org/js-team/node-orchestrator.git
+Homepage: https://github.com/robrich/orchestrator
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-orchestrator
+Architecture: all
+Depends: ${misc:Depends}
+ , node-end-of-stream
+ , node-sequencify
+ , node-stream-consume
+Description: sequence and execute tasks and dependencies in concurrency
+ A module for sequencing and executing tasks and dependencies in maximum
+ concurrency
+ .
+ Node.js is an event-based server-side JavaScript engine.
